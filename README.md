@@ -1,4 +1,4 @@
 # Svelte Tauri FileDrop
 
-Native file drop / dropzone component for Svelte
+Tauri file drop handling component for Svelte
 

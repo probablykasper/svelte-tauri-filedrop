@@ -7,6 +7,7 @@ const config = {
 
   kit: {
     target: 'body',
+    ssr: false,
   },
 }
 

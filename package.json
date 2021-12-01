@@ -1,7 +1,7 @@
 {
   "name": "svelte-tauri-filedrop",
   "version": "0.0.0",
-  "description": "Native file drop / dropzone component for Svelte",
+  "description": "Tauri file drop handling component for Svelte",
   "type": "module",
   "scripts": {
     "dev": "tauri dev",
