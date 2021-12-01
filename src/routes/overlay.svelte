@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FileDrop from '$lib/FileDrop.svelte'
+  import FileDrop from '$lib/index'
   import { fade } from 'svelte/transition'
 
   let droppedFiles: string[] = []
