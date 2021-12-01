@@ -79,7 +79,7 @@ You can use this variable through a let binding: `let:files`.
     ```
 4. Generate the package
     ```
-    npm run build:package
+    npm run package
     ```
 5. Publish the package
     ```
