@@ -1,0 +1,6 @@
+/build/
+/.svelte-kit
+/package
+
+/src-tauri/target/
+/src-tauri/WixTools
