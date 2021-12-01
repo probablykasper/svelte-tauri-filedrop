@@ -31,7 +31,7 @@
     display: flex
     align-items: center
     justify-content: center
-    background: hsla(0, 0, 0%, 0.1)
+    background: hsla(0deg, 0%, 0%, 0.1)
     h2
       padding: 20px
       background: #ffffff
