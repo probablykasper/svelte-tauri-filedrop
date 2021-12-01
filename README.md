@@ -1,5 +1,9 @@
 # Svelte Tauri FileDrop
 
+[![License](https://img.shields.io/npm/l/svelte-tauri-filedrop.svg)](LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/svelte-tauri-filedrop.svg)](https://npmjs.com/package/svelte-tauri-filedrop)
+[![NPM Downloads](https://img.shields.io/npm/dm/svelte-tauri-filedrop.svg)](https://npmjs.com/package/svelte-tauri-filedrop)
+
 Tauri file drop handling component for Svelte.
 
 ## Install
