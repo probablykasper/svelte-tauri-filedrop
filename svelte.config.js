@@ -5,10 +5,7 @@ const config = {
   extensions: ['.svelte', '.md'],
   preprocess: [preprocess()],
 
-  kit: {
-    target: 'body',
-    ssr: false,
-  },
+  kit: {},
 }
 
 export default config

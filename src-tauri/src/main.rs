@@ -11,9 +11,7 @@ fn main() {
       let win = win
         .title("Tauri Template")
         .resizable(true)
-        .transparent(false)
         .decorations(true)
-        .always_on_top(false)
         .inner_size(800.0, 600.0)
         .min_inner_size(400.0, 200.0)
         .skip_taskbar(false)
