@@ -68,8 +68,8 @@ You can use this variable through a let binding: `let:files`.
 ### Commands
 - `npm run dev`: Start in dev mode
 - `npm run package`: Build and package the component
-- `npm run check`: Run `svelte-check`
 - `npm run lint`: Lint
+- `npm run format`: Format
 
 ### Publish new version
 1. Update `CHANGELOG.md`
