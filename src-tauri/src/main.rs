@@ -18,6 +18,7 @@ fn main() {
         .fullscreen(false);
       return (win, webview);
     })
+    .unwrap()
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }
