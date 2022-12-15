@@ -5,32 +5,29 @@
   "type": "module",
   "scripts": {
     "dev": "tauri dev",
-    "dev:web": "svelte-kit dev",
-    "package": "svelte-kit package",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "lint": "prettier --check --plugin-search-dir=. src *.js && eslint src *.js && svelte-check",
-    "format": "prettier --write --plugin-search-dir=. src *.js && eslint --fix src *.js"
+    "dev:web": "vite dev",
+    "package": "svelte-package",
+    "lint": "prettier --check src *.js && eslint src *.js && svelte-check --tsconfig ./tsconfig.json",
+    "format": "prettier --write src *.js && eslint --fix src *.js"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.0.0-beta.8"
+    "@tauri-apps/api": "^1.2.0"
   },
   "devDependencies": {
-    "@sveltejs/kit": "^1.0.0-next.302",
-    "@tauri-apps/cli": "1.0.0-rc.7",
-    "@typescript-eslint/eslint-plugin": "^5.16.0",
-    "@typescript-eslint/parser": "^5.16.0",
-    "eslint": "^8.11.0",
+    "@sveltejs/kit": "^1.0.0",
+    "@sveltejs/package": "^1.0.0",
+    "@tauri-apps/cli": "^1.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte3": "^3.4.1",
-    "prettier": "^2.6.0",
-    "prettier-plugin-svelte": "^2.6.0",
-    "sass": "^1.49.9",
-    "svelte": "^3.46.4",
-    "svelte-check": "^2.4.6",
-    "svelte-preprocess": "^4.10.4",
-    "svelte2tsx": "^0.5.6",
-    "tslib": "^2.3.1",
-    "typescript": "^4.6.2"
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-svelte": "^2.9.0",
+    "sass": "^1.56.2",
+    "svelte": "^3.55.0",
+    "svelte-check": "^2.10.2",
+    "typescript": "^4.9.4"
   },
   "license": "MIT",
   "repository": {
@@ -55,6 +52,9 @@
   "prettier": {
     "printWidth": 100,
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "pluginSearchDirs": [
+      "."
+    ]
   }
 }
