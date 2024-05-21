@@ -3,12 +3,12 @@
   windows_subsystem = "windows"
 )]
 
-use tauri::{WindowBuilder, WindowUrl};
+use tauri::{WebviewWindowBuilder, WebviewUrl};
 
 fn main() {
   tauri::Builder::default()
     .setup(|app| {
-      let _ = WindowBuilder::new(app, "main", WindowUrl::default())
+      let _ = WebviewWindowBuilder::new(app, "main", WebviewUrl::default())
         .title("Tauri Template")
         .inner_size(800.0, 600.0)
         .min_inner_size(400.0, 200.0)

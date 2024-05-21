@@ -1,47 +1,41 @@
 {
-  "package": {
-    "productName": "svelte-tauri-filedrop"
-  },
+  "productName": "svelte-tauri-filedrop",
+  "identifier": "com.tauri.dev",
   "build": {
-    "distDir": "../build",
-    "devPath": "http://localhost:3000",
+    "frontendDist": "../build",
+    "devUrl": "http://localhost:3000",
     "beforeDevCommand": "npm run dev:web",
     "beforeBuildCommand": ""
   },
-  "tauri": {
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "com.tauri.dev",
-      "icon": [],
-      "resources": [],
-      "externalBin": [],
-      "copyright": "",
-      "category": "DeveloperTool",
-      "shortDescription": "",
-      "longDescription": "",
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [],
+    "resources": [],
+    "externalBin": [],
+    "copyright": "",
+    "category": "DeveloperTool",
+    "shortDescription": "",
+    "longDescription": "",
+    "linux": {
       "deb": {
         "depends": []
-      },
-      "macOS": {
-        "frameworks": [],
-        "minimumSystemVersion": "",
-        "exceptionDomain": "",
-        "signingIdentity": null,
-        "entitlements": null
-      },
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
       }
     },
-    "updater": {
-      "active": false
+    "macOS": {
+      "frameworks": [],
+      "minimumSystemVersion": "",
+      "exceptionDomain": "",
+      "signingIdentity": null,
+      "entitlements": null
     },
-    "allowlist": {
-      "all": false
-    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    }
+  },
+  "app":{
     "security": {
       "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     }

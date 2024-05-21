@@ -39,18 +39,28 @@
     return validPaths
   }
 
-  let files: string[] = []
+  export let files: string[] = []
+  export let position: null | {x: number, y: number} = null
 
-  const fileDropHover = event.listen('tauri://file-drop-hover', (e) => {
-    files = getValidPaths(e.payload as string[])
+  const fileDrag = event.listen<{paths:string[]}>('tauri://drag', (e) => {
+    position = null
+    files = getValidPaths(e.payload.paths)
+  })
+
+  onDestroy(async () => {
+    const unlisten = await fileDrag
+    unlisten()
+  })
+  const fileDropHover = event.listen<{position: {x: number, y: number}}>('tauri://drop-over', (e) => {
+    position = e.payload.position
   })
   onDestroy(async () => {
     const unlisten = await fileDropHover
     unlisten()
   })
 
-  const fileDrop = event.listen('tauri://file-drop', (e) => {
-    const payload = e.payload as string[]
+  const fileDrop = event.listen<{paths:string[]}>('tauri://drop', (e) => {
+    const payload = e.payload.paths
     files = getValidPaths(payload)
     if (files.length > 0) {
       handleFiles(files)
@@ -59,14 +69,16 @@
       handleOneFile(files[0])
     }
     files = []
+    position = null
   })
   onDestroy(async () => {
     const unlisten = await fileDrop
     unlisten()
   })
 
-  const fileDropCancelled = event.listen('tauri://file-drop-cancelled', () => {
+  const fileDropCancelled = event.listen('tauri://drag-cancelled', () => {
     files = []
+    position = null
   })
   onDestroy(async () => {
     const unlisten = await fileDropCancelled
@@ -74,4 +86,4 @@
   })
 </script>
 
-<slot {files} />
+<slot {files} {position}/>
