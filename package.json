@@ -1,6 +1,6 @@
 {
-  "name": "svelte-tauri-filedrop",
-  "version": "1.0.0",
+  "name": "@akylas/svelte-tauri-filedrop",
+  "version": "2.0.0",
   "description": "Tauri file drop handling component for Svelte",
   "type": "module",
   "scripts": {
@@ -9,6 +9,15 @@
     "package": "svelte-package",
     "lint": "svelte-check --tsconfig ./tsconfig.json && eslint src && prettier --check src",
     "format": "eslint --fix src && prettier --write src"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "svelte": "^4.2.17"
   },
   "devDependencies": {
     "@sveltejs/kit": "^1.30.4",

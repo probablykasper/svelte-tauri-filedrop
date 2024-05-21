@@ -1,0 +1,12 @@
+.DS_Store
+.yarn
+.svelte-kit
+src
+src-tauri
+node_modules
+pnpm-global
+CHANGELOG.md
+tsconfig.json
+vite.config.ts
+svelte.config.js
+.eslintrc.cjs
