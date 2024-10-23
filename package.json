@@ -11,11 +11,12 @@
 		"format": "eslint --fix src && prettier --write src"
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.5",
 		"@sveltejs/kit": "^2.7.2",
 		"@sveltejs/package": "^2.3.6",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
-		"@tauri-apps/api": "^1.6.0",
-		"@tauri-apps/cli": "^1.6.3",
+		"@tauri-apps/api": "^2.0.3",
+		"@tauri-apps/cli": "^2.0.4",
 		"eslint": "^9.13.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.46.0",
