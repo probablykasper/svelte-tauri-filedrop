@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## 2.0.1 - 2024 Oct 23
 - Supports Tauri 2
 - Supports Svelte 3, 4 and 5
 - `files` are now only provided when the user hovers over the dropzone.
