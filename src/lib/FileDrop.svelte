@@ -6,6 +6,7 @@
 
 	export let classes: string | null | undefined = undefined
 	export { classes as class }
+	export let style: string | undefined = undefined
 
 	/**
 	 * List of allowed file extensions. Disallowed files are filtered out.
@@ -78,6 +79,6 @@
 	})
 </script>
 
-<div class={classes} bind:this={dropzone}>
+<div bind:this={dropzone} class={classes} {style}>
 	<slot files={over ? files : []} />
 </div>
