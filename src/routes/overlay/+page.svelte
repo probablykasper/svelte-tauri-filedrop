@@ -1,24 +1,24 @@
 <script lang="ts">
-  import FileDrop from '$lib/index'
-  import { fade } from 'svelte/transition'
+	import FileDrop from '$lib/index'
+	import { fade } from 'svelte/transition'
 
-  let droppedFiles: string[] = []
-  function open(paths: string[]) {
-    droppedFiles = paths
-  }
+	let droppedFiles: string[] = []
+	function open(paths: string[]) {
+		droppedFiles = paths
+	}
 </script>
 
 <h1>Overlay Example</h1>
 
 <FileDrop handleFiles={open} let:files>
-  {#if files.length > 0}
-    <div class="overlay" transition:fade={{ duration: 100 }}>
-      <h2>Drop now</h2>
-    </div>
-  {/if}
+	{#if files.length > 0}
+		<div class="overlay" transition:fade={{ duration: 100 }}>
+			<h2>Drop now</h2>
+		</div>
+	{/if}
 </FileDrop>
 {#each droppedFiles as file}
-  <div>{file}</div>
+	<div>{file}</div>
 {/each}
 
 <style lang="sass">
