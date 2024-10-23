@@ -4,6 +4,9 @@
 
 	let dropzone: HTMLDivElement
 
+	export let classes: string | null | undefined = undefined
+	export { classes as class }
+
 	/**
 	 * List of allowed file extensions. Disallowed files are filtered out.
 	 *
@@ -75,6 +78,6 @@
 	})
 </script>
 
-<div bind:this={dropzone}>
+<div class={classes} bind:this={dropzone}>
 	<slot files={over ? files : []} />
 </div>
