@@ -75,7 +75,7 @@ You can use this variable through a let binding: `let:files`.
 1. Update `CHANGELOG.md`
 2. Check for errors
 		```
-		npm run check
+		npm run lint
 		```
 3. Bump the version number
 		```

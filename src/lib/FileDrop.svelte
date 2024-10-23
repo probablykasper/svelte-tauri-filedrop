@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { event, webview } from '@tauri-apps/api'
+	import { webview } from '@tauri-apps/api'
 	import { onDestroy } from 'svelte'
 
 	/**
