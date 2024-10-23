@@ -25,6 +25,12 @@
 		// noop
 	}
 
+	/**
+	 * Allow the user to drop files anywhere on the window
+	 * @deprecated
+	 */
+	export let global_hover = false
+
 	function getValidPaths(paths: string[]) {
 		if (extensions === null) {
 			return paths
@@ -42,8 +48,10 @@
 	}
 
 	let files: string[] = []
+	let over = false
 
-	const drag_drop_off = webview.getCurrentWebview().onDragDropEvent((e) => {
+	const current_webview = webview.getCurrentWebview()
+	const drag_drop_off = current_webview.onDragDropEvent(async (e) => {
 		if (e.payload.type === 'enter') {
 			files = getValidPaths(e.payload.paths)
 		} else if (e.payload.type === 'drop') {
@@ -59,7 +67,7 @@
 			files = []
 		} else if (e.payload.type === 'over') {
 			const hovered_el = document.elementFromPoint(e.payload.position.x, e.payload.position.y)
-			over = dropzone.contains(hovered_el)
+			over = dropzone.contains(hovered_el) || global_hover
 		}
 	})
 	onDestroy(async () => {
