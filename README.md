@@ -87,7 +87,7 @@ You can use this variable through a let binding: `let:files`.
 		```
 5. Publish the package
 		```
-		npm publish ./package
+		npm publish
 		```
 6. Commit with a tag in format "v#.#.#"
 7. Create GitHub release with release notes

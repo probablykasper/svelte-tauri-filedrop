@@ -35,9 +35,9 @@
 	"exports": {
 		"./package.json": "./package.json",
 		".": {
-			"types": "./dist/Modal.svelte.d.ts",
-			"svelte": "./dist/Modal.svelte",
-			"default": "./dist/Modal.svelte"
+			"types": "./dist/FileDrop.svelte.d.ts",
+			"svelte": "./dist/FileDrop.svelte",
+			"default": "./dist/FileDrop.svelte"
 		}
 	},
 	"license": "MIT",
