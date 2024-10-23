@@ -14,28 +14,28 @@ npm install svelte-tauri-filedrop
 ## Usage
 ```svelte
 <script lang="ts">
-  import FileDrop from 'svelte-tauri-filedrop'
+	import FileDrop from 'svelte-tauri-filedrop'
 
-  function open(paths: string[]) {
-    // ...
-  }
+	function open(paths: string[]) {
+		// ...
+	}
 </script>
 
 <FileDrop extensions={['json']} handleFiles={open} let:files>
-  <div class="dropzone" class:droppable={files.length > 0}>
-    <h2>Drop JSON files</h2>
-  </div>
+	<div class="dropzone" class:droppable={files.length > 0}>
+		<h2>Drop JSON files</h2>
+	</div>
 </FileDrop>
 
 <style>
-  .dropzone {
-    margin: 20px;
-    padding: 20px;
-    background: #eee;
-  }
-  .droppable {
-    background: #d6dff0;
-  }
+	.dropzone {
+		margin: 20px;
+		padding: 20px;
+		background: #eee;
+	}
+	.droppable {
+		background: #d6dff0;
+	}
 </style>
 ```
 
@@ -74,20 +74,20 @@ You can use this variable through a let binding: `let:files`.
 ### Publish new version
 1. Update `CHANGELOG.md`
 2. Check for errors
-    ```
-    npm run check
-    ```
+		```
+		npm run check
+		```
 3. Bump the version number
-    ```
-    npm version --no-git-tag <version>
-    ```
+		```
+		npm version --no-git-tag <version>
+		```
 4. Generate the package
-    ```
-    npm run package
-    ```
+		```
+		npm run package
+		```
 5. Publish the package
-    ```
-    npm publish ./package
-    ```
+		```
+		npm publish ./package
+		```
 6. Commit with a tag in format "v#.#.#"
 7. Create GitHub release with release notes

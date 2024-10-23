@@ -1,21 +1,21 @@
 <script lang="ts">
-  import FileDrop from '$lib/index'
+	import FileDrop from '$lib/index'
 
-  let droppedFiles: string[] = []
-  function open(paths: string[]) {
-    droppedFiles = paths
-  }
+	let droppedFiles: string[] = []
+	function open(paths: string[]) {
+		droppedFiles = paths
+	}
 </script>
 
 <h1>Main Example</h1>
 
 <FileDrop extensions={['json']} handleFiles={open} let:files>
-  <div class="dropzone" class:droppable={files.length > 0}>
-    <h2>Drop JSON files</h2>
-    {#each droppedFiles as file}
-      <div>{file}</div>
-    {/each}
-  </div>
+	<div class="dropzone" class:droppable={files.length > 0}>
+		<h2>Drop JSON files</h2>
+		{#each droppedFiles as file}
+			<div>{file}</div>
+		{/each}
+	</div>
 </FileDrop>
 
 <style lang="sass">
