@@ -2,6 +2,8 @@
 	import { webview } from '@tauri-apps/api'
 	import { onDestroy } from 'svelte'
 
+	let dropzone: HTMLDivElement
+
 	/**
 	 * List of allowed file extensions. Disallowed files are filtered out.
 	 *
@@ -55,6 +57,9 @@
 			files = []
 		} else if (e.payload.type === 'leave') {
 			files = []
+		} else if (e.payload.type === 'over') {
+			const hovered_el = document.elementFromPoint(e.payload.position.x, e.payload.position.y)
+			over = dropzone.contains(hovered_el)
 		}
 	})
 	onDestroy(async () => {
@@ -62,4 +67,6 @@
 	})
 </script>
 
-<slot {files} />
+<div bind:this={dropzone}>
+	<slot files={over ? files : []} />
+</div>
