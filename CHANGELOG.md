@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## 2.0.2 - 2025 Apr 12
 - Fix npm package
 
 ## 2.0.1 - 2024 Oct 23
